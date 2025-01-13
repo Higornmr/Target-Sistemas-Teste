@@ -12,7 +12,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background-color: #f9f9f9;
-    color: #333;
+    color: white;
+    background-color: #404041;
 }
 
 .container {
@@ -26,17 +27,27 @@ body {
 
 .containerTechnique {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     padding: 20px;
 }
 
 .techniqueItem {
+    height: 200px;
+    width: 250px;
+    border: 1px solid #E2001A;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 15px 10px;
 }
 
 .TechniqueTitle {
@@ -86,8 +97,32 @@ body {
     color: gray;
 }
 
+.inputTexto {
+    height: 40px; 
+    width: 180px;
+    padding: 0 15px; 
+    border: 2px solid #E2001A;
+    border-radius: 5px;
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #333; 
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+}
+
+.inputTexto:focus {
+    outline: none;
+    border-color: #B30016; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.inputTexto::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
 .result {
     display: flex;
     flex-direction: column;
-    
 }
