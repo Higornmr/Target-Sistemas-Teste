@@ -108,6 +108,16 @@ document.querySelector('.quarta').addEventListener('click', () => {
 });
 
 document.querySelector('.quinta').addEventListener('click', () => {
-    const texto = "OpenAI"; // Altere aqui para testar outras strings
-    document.querySelector('.result').textContent = inverterString(texto);
+    const texto = document.querySelector('.inputTexto').value; // Obtém o valor do input
+    if (texto) {
+        document.querySelector('.result').textContent = inverterString(texto);
+    } else {
+        document.querySelector('.result').textContent = "Por favor, insira um texto.";
+    }
 });
+
+// Função para inverter a string
+function inverterString(str) {
+    return str.split('').reverse().join('');
+}
+
