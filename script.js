@@ -1,4 +1,4 @@
-// Funções relacionadas às técnicas
+// 1 )
 function calculateSoma() {
     let INDICE = 13;
     let SOMA = 0;
@@ -11,6 +11,7 @@ function calculateSoma() {
     return `Valor final de SOMA: ${SOMA}`;
 }
 
+// 2 )
 function isFibonacci(num) {
     let a = 0, b = 1, temp;
 
@@ -40,6 +41,7 @@ async function carregarDados() {
     }
 }
 
+// 3 ) 
 function calcularFaturamento(faturamento) {
     const valoresValidos = faturamento.filter(d => d.valor > 0).map(d => d.valor);
 
@@ -58,6 +60,7 @@ function calcularFaturamento(faturamento) {
     `;
 }
 
+// 4 )
 function calcularPercentual(faturamento) {
     const total = Object.values(faturamento).reduce((acc, cur) => acc + cur, 0);
     let resultado = "";
@@ -69,6 +72,7 @@ function calcularPercentual(faturamento) {
     return resultado;
 }
 
+// 5 ) 
 function inverterString(str) {
     let invertida = "";
     for (let i = str.length - 1; i >= 0; i--) {
@@ -79,17 +83,17 @@ function inverterString(str) {
 
 // Vinculando funções aos botões
 document.querySelector('.primeira').addEventListener('click', () => {
-    document.querySelector('.resultado').textContent = calculateSoma();
+    document.querySelector('.result').textContent = calculateSoma();
 });
 
 document.querySelector('.segunda').addEventListener('click', () => {
     const num = 21; // Altere aqui para testar outros números
-    document.querySelector('.resultado').textContent = isFibonacci(num);
+    document.querySelector('.result').textContent = isFibonacci(num);
 });
 
 document.querySelector('.terceira').addEventListener('click', async () => {
     const resultado = await carregarDados();
-    document.querySelector('.resultado').textContent = resultado;
+    document.querySelector('.result').textContent = resultado;
 });
 
 document.querySelector('.quarta').addEventListener('click', () => {
@@ -100,10 +104,10 @@ document.querySelector('.quarta').addEventListener('click', () => {
         ES: 27165.48,
         Outros: 19849.53
     };
-    document.querySelector('.resultado').textContent = calcularPercentual(faturamentoPorEstado);
+    document.querySelector('.result').textContent = calcularPercentual(faturamentoPorEstado);
 });
 
 document.querySelector('.quinta').addEventListener('click', () => {
     const texto = "OpenAI"; // Altere aqui para testar outras strings
-    document.querySelector('.resultado').textContent = inverterString(texto);
+    document.querySelector('.result').textContent = inverterString(texto);
 });
